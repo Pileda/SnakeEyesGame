@@ -1,0 +1,24 @@
+﻿@model SnakeEyesGame.Models.SnakeEyes
+<!doctype html>
+<html>
+<head>
+	<title>SnakeEyes</title>
+	<link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+	<h1>Snake Eyes</h1>
+	<p>Keep going but don't get 2 one's</p>
+	<p>
+		<span class="snakeEye">@Model.Eye1</span>
+		<span class="snakeEye">@Model.Eye2</span>
+	</p>
+	<p>
+		Total : @Model.Total
+	</p>
+	<form asp-controller="Home" asp-action="Play" method="post">
+		<input id="buttonPlay" type="submit" value="Play" />
+	</form>
+
+</body>
+</html>
+
